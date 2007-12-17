@@ -22,7 +22,6 @@ BuildRequires:  jpeg-devel
 BuildRequires:  libmagic-devel
 # not automatically found:
 Requires:	perl-Gtk2-PodViewer
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 CV is a fast gtk+ image viewer modeled after xv.
