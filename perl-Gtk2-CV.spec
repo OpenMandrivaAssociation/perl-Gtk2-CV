@@ -1,7 +1,8 @@
 %define module	Gtk2-CV
 %define name	perl-%{module}
-%define version 1.5
-%define release %mkrel 3
+%define version 1.5.1
+%define up_version  1.51
+%define release %mkrel 1
 
 Name: 		%{name}
 Version: 	%{version}
@@ -10,7 +11,7 @@ Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:            http://search.cpan.org/dist/%{module}/
-Source:         http://www.cpan.org/modules/by-module/Gtk2/%{module}-%{version}.tar.bz2
+Source:         http://www.cpan.org/modules/by-module/Gtk2/%{module}-%{up_version}.tar.gz
 BuildRequires:	gtkspell-devel
 BuildRequires:	perl-devel
 BuildRequires:	perl-ExtUtils-Depends
@@ -28,7 +29,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 CV is a fast gtk+ image viewer modeled after xv.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{up_version}
 find -type d -name CVS | rm -rf 
 
 %build
