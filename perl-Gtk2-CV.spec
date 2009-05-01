@@ -1,6 +1,6 @@
 %define module	Gtk2-CV
 %define name	perl-%{module}
-%define version 1.5.3
+%define version 1.54
 %define up_version  1.53
 %define release %mkrel 1
 
