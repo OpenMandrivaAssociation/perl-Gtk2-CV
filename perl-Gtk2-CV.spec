@@ -3,7 +3,7 @@
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
@@ -20,6 +20,7 @@ BuildRequires:	perl(ExtUtils::PkgConfig)
 BuildRequires:	perl(Gtk2)
 BuildRequires:	perl(Glib) > 1.00
 BuildRequires:	perl-devel
+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 # not automatically found:
 Requires:	perl-Gtk2-PodViewer
@@ -30,6 +31,7 @@ CV is a fast gtk+ image viewer modeled after xv.
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 find -type d -name CVS | rm -rf 
+perl -pi -e 's/PetRenamer/PatRenamer/' lib/Gtk2/CV/Plugin/PatRenamer.pm
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +53,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/Gtk2*
 %{perl_vendorarch}/auto/Gtk2
-
