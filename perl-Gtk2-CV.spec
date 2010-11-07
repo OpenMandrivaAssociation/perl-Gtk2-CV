@@ -1,11 +1,11 @@
 %define upstream_name	 Gtk2-CV
-%define upstream_version 1.55
+%define upstream_version 1.56
 
 %define _requires_exceptions perl(Gtk2::CV::Jobber::Client::)
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
-Release: 	%mkrel 3
+Release: 	%mkrel 1
 
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
