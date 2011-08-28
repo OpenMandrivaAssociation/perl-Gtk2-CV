@@ -5,7 +5,7 @@
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
@@ -37,7 +37,7 @@ perl -pi -e 's/PetRenamer/PatRenamer/' lib/Gtk2/CV/Plugin/PatRenamer.pm
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="$RPM_OPT_FLAGS -Os -s"
+%make
 
 %check
 %{__make} test
