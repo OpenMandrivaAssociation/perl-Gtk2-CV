@@ -14,7 +14,7 @@ Release:	6
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}/
+Url:        https://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	gtkspell-devel
