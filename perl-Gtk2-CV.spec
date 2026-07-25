@@ -1,5 +1,5 @@
 %define upstream_name	 Gtk2-CV
-%define upstream_version 1.56
+%define upstream_version 2.0
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Gtk2::CV::Jobber::Client(.*)\\)'
@@ -8,14 +8,14 @@
 %endif
 
 Name: 		perl-%{upstream_name}
-Version: 	%perl_convert_version %{upstream_version}
-Release:	6
+Version: 	%{upstream_version}
+Release:	1
 
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Gtk2-CV
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Gtk2-CV-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	gtkspell-devel
