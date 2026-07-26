@@ -1,6 +1,4 @@
 %define upstream_name	 Gtk2-CV
-%define upstream_version 2.0
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Gtk2::CV::Jobber::Client(.*)\\)'
 %else
@@ -8,14 +6,14 @@
 %endif
 
 Name: 		perl-%{upstream_name}
-Version: 	%{upstream_version}
-Release:	1
+Version: 	2.0
+Release:	2
 
 Summary:	A fast gtk+ image viewer modeled after xv
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        https://metacpan.org/dist/Gtk2-CV
-Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Gtk2-CV-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Gtk2-CV-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	gtkspell-devel
@@ -35,7 +33,7 @@ Requires:	perl(Gtk2::PodViewer)
 CV is a fast gtk+ image viewer modeled after xv.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find -type d -name CVS | rm -rf 
 perl -pi -e 's/PetRenamer/PatRenamer/' lib/Gtk2/CV/Plugin/PatRenamer.pm
 
@@ -88,8 +86,7 @@ make test
 * Fri Jul 24 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.540.0-1mdv2010.0
 + Revision: 399302
 - update to 1.54 for real this time
-- using %%perl_convert_version
-- fixed license & buildrequires fields
+- using %2.0 fixed license & buildrequires fields
 
 * Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.54-1mdv2010.0
 + Revision: 370127
